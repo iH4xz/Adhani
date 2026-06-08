@@ -88,7 +88,7 @@ Adhani-Prayer-Bot/
 | `WEBHOOK_URL` | رابط الويب هوك (Polling اتركه فارغاً لـ) | Webhook URL (Leave empty for Polling) | `https://yourdomain.com` |
 | `WEBHOOK_SECRET` | سر للأمان (يتم توليده تلقائياً إن لم يوجد) | Security secret (auto-generated if missing) | `random_secret_string` |
 | `PORT` | منفذ الخادم (uvicorn الارتباط بـ) | Server port (linked to uvicorn) | `8000` |
-| `ADMIN_ID` | معرّفك الرقمي في تيليغرام | Your Telegram user ID | `716300112` |
+| `ADMIN_ID` | معرّفك الرقمي في تيليغرام | Your Telegram user ID | `123456789` |
 | `ALLOWED_COUNTRIES` | (ISO 3166-1 alpha-2) أكواد الدول المسموحة | Allowed country codes (ISO alpha-2) | `SA,KW,AE` |
 | `ALADHAN_API_URL` | جلب أوقات الصلاة API رابط | API URL for fetching prayer times | `https://api.aladhan.com/v1/timings` |
 | `REMINDER_BATCH_SIZE` | عدد التذكيرات التي يتم فحصها دفعة واحدة | Number of reminders processed in one batch | `50` |
