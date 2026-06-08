@@ -149,14 +149,6 @@ _STRINGS: dict[str, dict[str, str]] = {
         "ar": "❌ غير مصرح.",
         "en": "❌ Unauthorized.",
     },
-    "broadcast_prompt": {
-        "ar": "📢 أرسل الرسالة التي تريد إذاعتها لجميع المستخدمين:",
-        "en": "📢 Send the message you want to broadcast to all users:",
-    },
-    "broadcast_done": {
-        "ar": "✅ تم الإرسال لـ {sent} مستخدم من أصل {total}.",
-        "en": "✅ Sent to {sent} users out of {total}.",
-    },
     # ── مدينة يدوية ────────────────────────────────────────────────────────────
     "type_city": {
         "ar": "✍️ اكتب اسم مدينتك:\nمثال: Riyadh أو الرياض",

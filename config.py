@@ -58,9 +58,6 @@ TG_SEND_DELAY: float    = 0.04    # seconds between sends  (= 25 msg/sec ceiling
 TG_RETRY_MAX: int       = 3       # max retries on 429 RetryAfter
 TG_RETRY_BASE: float    = 1.0     # base sleep on non-RetryAfter errors (exponential)
 
-# Broadcast pacing
-BROADCAST_CHUNK: int         = 25   # send N messages …
-BROADCAST_CHUNK_SLEEP: float = 1.0  # … then pause 1 second  → sustained ≈ 25 msg/s
 
 # Reminder engine
 REMINDER_BATCH_SIZE: int      = int(os.getenv("REMINDER_BATCH_SIZE", 50))
@@ -134,8 +131,7 @@ SA_CITIES: dict[str, tuple] = {
 (
     SELECTING_ACTION,
     TYPING_CUSTOM_CITY,
-    AWAITING_BROADCAST,
-) = range(3)
+) = range(2)
 
 # ── Storage ───────────────────────────────────────────────────────────────────
 STORAGE_DIR: str = "storage"
