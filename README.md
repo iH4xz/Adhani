@@ -8,12 +8,18 @@ A professional Telegram bot for Islamic prayer times, high performance, sharded 
 
 ## 🚀 المميزات | Features
 
-- **🌍 تحديد تلقائي للموقع | Auto-location**: دعم GPS وإرسال الموقع أو اختيار يدوي للمدينة. | Support for GPS, live location, or manual city selection.
-- **🔔 نظام تذكيرات ذكي | Smart Reminders**: محرك تذكيرات مُحسن يدعم حتى 500ألف مستخدم مع معالجة على دُفعات لتجنب حظر تيليغرام. | Optimized reminder engine supporting up to 500k users with batch processing to avoid Telegram rate limits.
-- **🗄️ قاعدة بيانات مجزأة (Sharding) | Sharded Database**: توزيع المستخدمين على عدة ملفات SQLite لزيادة كفاءة القراءة والكتابة والنسخ الاحتياطي. | Distributing users across multiple SQLite files for better I/O performance and easier backups.
-- **🔄 ترحيل تلقائي | Auto Migration**: نظام تحويل تلقائي لقواعد البيانات القديمة إلى الصيغة الحديثة. | Automatic migration system from legacy database formats to the current sharded schema.
-- **🛠️ لوحة تحكم إدارية | Admin Panel**: واجهة متكاملة للمالك لإدارة الإحصائيات وإرسال الرسائل الجماعية. | Comprehensive dashboard for the owner to manage stats and global broadcasts.
-- **💬 تفاعل ذكي | Smart Interaction**: الاستجابة لكلمات مفتاحية مثل "أذاني" أو "الصلاة" تلقائياً. | Automatic response to keywords like "Adhani" or "Prayer".
+- **🌍 تحديد تلقائي للموقع | Auto-location**: دعم GPS وإرسال الموقع أو اختيار يدوي للمدينة. 
+- EN | Support for GPS, live location, or manual city selection.
+- **🔔 نظام تذكيرات ذكي | Smart Reminders**: محرك تذكيرات مُحسن يدعم حتى 500ألف مستخدم مع معالجة على دُفعات لتجنب حظر تيليغرام. 
+- EN | Optimized reminder engine supporting up to 500k users with batch processing to avoid Telegram rate limits.
+- **🗄️ قاعدة بيانات مجزأة (Sharding) | Sharded Database**: توزيع المستخدمين على عدة ملفات SQLite لزيادة كفاءة القراءة والكتابة والنسخ الاحتياطي. 
+- EN | Distributing users across multiple SQLite files for better I/O performance and easier backups.
+- **🔄 ترحيل تلقائي | Auto Migration**: نظام تحويل تلقائي لقواعد البيانات القديمة إلى الصيغة الحديثة. 
+- EN | Automatic migration system from legacy database formats to the current sharded schema.
+- **🛠️ لوحة تحكم إدارية | Admin Panel**: واجهة متكاملة للمالك لإدارة الإحصائيات وإرسال الرسائل الجماعية. 
+- EN | Comprehensive dashboard for the owner to manage stats and global broadcasts.
+- **💬 تفاعل ذكي | Smart Interaction**: الاستجابة لكلمات مفتاحية مثل "أذاني" أو "الصلاة" تلقائياً. 
+- EN | Automatic response to keywords like "Adhani" or "Prayer".
 
 ---
 
@@ -142,11 +148,16 @@ The bot utilizes a **Sharded SQLite** architecture for high performance:
 
 ## 🛠️ التقنيات | Technologies
 
-- **Python-Telegram-Bot (v22.6)**: أحدث إصدار لمكتبة تيليغرام. | Latest Telegram library version.
-- **FastAPI & Uvicorn**: خادم ويب عالي الأداء لمعالجة الويب هوك. | High-performance web server for webhooks.
-- **aiosqlite**: للتعامل غير المتزامن مع قواعد البيانات. | Asynchronous SQLite interaction.
-- **HTTPX**: لإرسال طلبات الـ API بسرعة وكفاءة. | Fast and efficient asynchronous API requests.
-- **Geopy & Timezonefinder**: للتعامل مع المواقع الجغرافية والمناطق الزمنية. | Geolocation and timezone management.
+- **Python-Telegram-Bot (v22.6)**: أحدث إصدار لمكتبة تيليغرام. 
+- EN | Latest Telegram library version.
+- **FastAPI & Uvicorn**: خادم ويب عالي الأداء لمعالجة الويب هوك. 
+- EN | High-performance web server for webhooks.
+- **aiosqlite**: للتعامل غير المتزامن مع قواعد البيانات. 
+- EN | Asynchronous SQLite interaction.
+- **HTTPX**: لإرسال طلبات الـ API بسرعة وكفاءة. 
+- EN | Fast and efficient asynchronous API requests.
+- **Geopy & Timezonefinder**: للتعامل مع المواقع الجغرافية والمناطق الزمنية. 
+- EN | Geolocation and timezone management.
 
 ---
 
