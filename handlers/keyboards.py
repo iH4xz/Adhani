@@ -183,23 +183,10 @@ def admin_panel_kb() -> InlineKeyboardMarkup:
             InlineKeyboardButton("👥 المجموعات",     callback_data="admin|groups"),
         ],
         [
-            InlineKeyboardButton("📢 إذاعة رسالة",   callback_data="admin|broadcast"),
             InlineKeyboardButton("🔄 مسح الكاش",     callback_data="admin|clearcache"),
+            InlineKeyboardButton("🌍 الدول المسموحة", callback_data="admin|countries"),
         ],
         [
-            InlineKeyboardButton("🌍 الدول المسموحة", callback_data="admin|countries"),
             InlineKeyboardButton("🔧 معلومات النظام", callback_data="admin|sysinfo"),
         ],
-    ])
-
-
-# ── تأكيد الإذاعة ────────────────────────────────────────────────────────────
-def broadcast_confirm_kb(lang: str = "ar") -> InlineKeyboardMarkup:
-    return InlineKeyboardMarkup([
-        [
-            InlineKeyboardButton("✅ تأكيد الإرسال" if lang == "ar" else "✅ Confirm Send",
-                                 callback_data="admin|broadcast_confirm"),
-            InlineKeyboardButton("❌ إلغاء" if lang == "ar" else "❌ Cancel",
-                                 callback_data="admin|broadcast_cancel"),
-        ]
     ])

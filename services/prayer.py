@@ -132,7 +132,13 @@ class PrayerService:
             m = hijri.get("month", {}).get("ar" if lang == "ar" else "en", "")
             hijri_str = f"{hijri['day']} {m} {hijri['year']} هـ"
 
-        if greg:
+        if greg and greg.get("date"):
+            try:
+                g_dt = datetime.strptime(greg["date"], "%d-%m-%Y")
+                greg_str = g_dt.strftime("%d %B %Y")
+            except Exception:
+                greg_str = now.strftime("%d %B %Y")
+        elif greg:
             greg_str = now.strftime("%d %B %Y")
 
         if date_pref == "hijri":

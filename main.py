@@ -32,7 +32,7 @@ try:
     filterwarnings("ignore", message=r".*CallbackQueryHandler", category=PTBUserWarning)
 
     from config import TOKEN, WEBHOOK_URL, PORT, WEBHOOK_SECRET
-    from config import SELECTING_ACTION, TYPING_CUSTOM_CITY, AWAITING_BROADCAST
+    from config import SELECTING_ACTION, TYPING_CUSTOM_CITY
 
     if not TOKEN:
         logger.critical("❌  TELEGRAM_TOKEN غير موجود في .env")
@@ -62,8 +62,7 @@ try:
     from handlers.reminder_cmd import reminder_command
     from handlers.group import g_command
     from handlers.admin import (
-        admin_command, stats_command, broadcast_command,
-        handle_broadcast_message, admin_callback,
+        admin_command, stats_command, admin_callback,
     )
     from handlers.inline import inline_handler
 
@@ -86,19 +85,7 @@ def _register_handlers(ptb: Application) -> None:
         per_user=True,
         per_chat=True,
     )
-    broadcast_conv = ConversationHandler(
-        entry_points=[CommandHandler("broadcast", broadcast_command)],
-        states={
-            AWAITING_BROADCAST: [
-                MessageHandler(filters.TEXT & ~filters.COMMAND, handle_broadcast_message),
-                CallbackQueryHandler(admin_callback, pattern=r"^admin\|broadcast"),
-            ],
-        },
-        fallbacks=[CommandHandler("cancel", cancel)],
-        per_user=True,
-    )
     ptb.add_handler(city_conv)
-    ptb.add_handler(broadcast_conv)
     ptb.add_handler(CommandHandler("help",     help_command))
     ptb.add_handler(CommandHandler("my",       my_command))
     ptb.add_handler(CommandHandler("settings", settings_command))
